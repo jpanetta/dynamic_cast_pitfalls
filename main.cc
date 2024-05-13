@@ -10,6 +10,9 @@ int main(int argc, const char *argv[]) {
     bases.push_back(make_derived(2));
     bases.push_back(make_derived(3));
 
+    bases.push_back(lib1_make_derived(1));
+    bases.push_back(lib2_make_derived(1));
+
     for (const auto &b : bases) {
         lib1_run(b.get());
         lib2_run(b.get());
